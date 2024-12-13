@@ -1,0 +1,21 @@
+Potential Issues with Code:
+
+1. Nested Callbacks: The function contains deeply nested callbacks, making it hard to read and maintain.
+
+2. Error Handling: Errors are not consistently handled. For instance:
+- If invitationResponse.status is neither 201 nor 200, it defaults to sending the response without proper checks.
+- Missing error handling for shop.save().
+
+
+Improvements:
+1. Modern JavaScript Features:
+- Used async/await for better readability.
+- Destructured req for cleaner parameter handling.
+
+2. Error Handling:
+- Centralized try/catch for error management.
+- Added response for unexpected statuses.
+
+3. Reduced Callbacks: Replaced nested callbacks with async/await.
+
+4. Code Reusability: Broke logic into smaller reusable chunks if further enhancement is needed.
